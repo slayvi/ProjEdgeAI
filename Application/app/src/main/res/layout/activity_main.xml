@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e0e7f4"
+    tools:context=".MainActivity">
+
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/emotionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:background="#265e8b"
+        android:text="Edge AI Application"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintTop_toBottomOf="@id/emotionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"/>
+
+    <!-- Show Text "Please select Image" -->
+    <TextView
+        android:id="@+id/placeholderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please select Image"
+        android:textSize="18sp"
+        android:textColor="#808080"
+        app:layout_constraintTop_toTopOf="@id/imageView"
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@id/imageView"/>
+
+    <!-- Camera Button -->
+    <Button
+        android:id="@+id/button_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Camera"
+        android:backgroundTint="#3b6e96"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/button_predict"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+
+    <!-- Gallery Button -->
+    <Button
+        android:id="@+id/button_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Photo"
+        android:backgroundTint="#3b6e96"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/button_predict"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"/>
+
+    <!-- Predict Button -->
+    <Button
+        android:id="@+id/button_predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Predict"
+        android:backgroundTint="#3b6e96"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@id/classificationResults"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="4dp" />
+
+    <!-- Classification Results -->
+    <TextView
+        android:id="@+id/classificationResults"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:padding="8dp"
+        android:textColor="@android:color/black"
+        android:background="#c8e2f7"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@id/text_latency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="0dp"/>
+
+
+    <!-- Latency -->
+    <TextView
+        android:id="@+id/text_latency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Latency: "
+        android:background="#7eabcf"
+        android:textColor="@android:color/black"
+        android:padding="8dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="0dp"/>
+
+    <!-- Show Text "No Face detected" -->
+    <TextView
+        android:id="@+id/noFaceDetectedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Face detected"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Normal Button -->
+    <Button
+        android:id="@+id/button_normal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Normal"
+        android:backgroundTint="#7c9eb9"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/emotionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.33"/>
+
+    <!-- Quant Button -->
+    <Button
+        android:id="@+id/button_quantized"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quantized"
+        android:backgroundTint="#7c9eb9"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/emotionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.33"/>
+
+    <!-- Pruned Button -->
+    <Button
+        android:id="@+id/button_pruned"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pruned"
+        android:backgroundTint="#7c9eb9"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/emotionTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.33"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
