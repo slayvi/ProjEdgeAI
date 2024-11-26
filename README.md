@@ -4,14 +4,14 @@ This repo contains the files for the Project EdgeAI for my studies Applied Artif
 ---
 
 ## Structure:
-📂 /Application: Source Code for Android Studio with all necessary assets
+📂 /Application: Source Code for Android Studio with all necessary assets<br>
 📂 /Classification: Source Code for Training and Testing the Deep Learning Models as well as the preprocessing steps, which were undertaken locally.
 
-
+---
 
 ## Application:
 
-The UI of the application is shown in the following picture:
+The UI of the application is shown in the following picture:<br>
 ![UI of the Application](ui.png)
 
 The application allows the selection of an image from the camera or gallery. The predictions can be done with three different models: the converted tf-lite file, the quantizied model and the pruned and quantizied model. The prediction will appear after pressing the predict button. 
