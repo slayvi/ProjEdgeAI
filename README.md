@@ -12,6 +12,7 @@ This repo contains the files for the Project EdgeAI for my studies Applied Artif
 ## Application:
 
 The UI of the application is shown in the following picture:<br>
+ <br>
 ![UI of the Application](ui.png)
 <br> 
 <br>The application allows the selection of an image from the camera or gallery. The predictions can be done with three different models: the converted tf-lite file, the quantizied model and the pruned and quantizied model. The prediction will appear after pressing the predict button. 
