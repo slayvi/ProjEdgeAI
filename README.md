@@ -4,7 +4,7 @@ This repo contains the files for the Project EdgeAI for my studies Applied Artif
 ---
 
 ## Structure:
-📂 **/Application**: Source Code for Android Studio with all necessary assets<br>
+📂 **/Application**: Source Code for Android Studio with all necessary assets.<br>
 📂 **/Classification**: Source Code for Training and Testing the Deep Learning Models as well as preprocessing steps which were done locally.
 
 ---
